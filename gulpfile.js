@@ -11,7 +11,66 @@ metal.registerTasks({
 	bundleFileName: 'metal.js',
 	cssSrc: 'node_modules/metal-*/src/**/*.css',
 	karma: karma,
-	scssSrc: 'node_modules/metal-*/src/**/*.scss'
+	scssSrc: 'node_modules/metal-*/src/**/*.scss',
+	testSaucelabsBrowsers: {
+		sl_chrome: {
+			base: 'SauceLabs',
+			browserName: 'chrome'
+		},
+		sl_safari: {
+			base: 'SauceLabs',
+			browserName: 'safari'
+		},
+		sl_firefox: {
+			base: 'SauceLabs',
+			browserName: 'firefox'
+		},
+		sl_ie_9: {
+			base: 'SauceLabs',
+			browserName: 'internet explorer',
+			platform: 'Windows 7',
+			version: '9'
+		},
+		sl_ie_10: {
+			base: 'SauceLabs',
+			browserName: 'internet explorer',
+			platform: 'Windows 7',
+			version: '10'
+		},
+		sl_ie_11: {
+			base: 'SauceLabs',
+			browserName: 'internet explorer',
+			platform: 'Windows 8.1',
+			version: '11'
+		},
+		sl_edge_13: {
+			base: 'SauceLabs',
+			browserName: 'microsoftedge',
+			platform: 'Windows 10',
+			version: '13'
+		},
+		sl_iphone: {
+			appiumVersion: '1.6.0',
+			base: 'SauceLabs',
+			browserName: 'Safari',
+			deviceName: "iPhone 6 Simulator",
+			deviceOrientation: "portrait",
+			platformName: 'iOS',
+			platformVersion: '9.3'
+		},
+		sl_android_4: {
+			base: 'SauceLabs',
+			browserName: 'android',
+			platform: 'Linux',
+			version: '4.4'
+		},
+		sl_android_5: {
+			base: 'SauceLabs',
+			browserName: 'android',
+			platform: 'Linux',
+			version: '5.0'
+		}
+	}
 });
 
 gulp.task('soy:copy', function() {
