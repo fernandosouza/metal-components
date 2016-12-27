@@ -7,8 +7,6 @@ before_install:
   - nvm install 5
 install:
   - npm i
-before_script:
-  
 script: travis_wait gulp test:saucelabs
 env:
   global:
